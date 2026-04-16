@@ -1,3 +1,8 @@
+---
+layout: default
+title: "Privacy Policy (English)"
+---
+
 # Privacy Policy
 
 > This document is a draft privacy policy for the **Lüyuanbao (綠緣寶)** app. Please have it reviewed by the responsible person or legal counsel before publication, and complete company details, contact information, address, version date, and effective date.
