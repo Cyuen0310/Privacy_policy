@@ -5,13 +5,13 @@ title: "Privacy Policy (English)"
 
 # Privacy Policy
 
-> This document is a draft privacy policy for the **Lüyuanbao (綠緣寶)** app. Please have it reviewed by the responsible person or legal counsel before publication, and complete company details, contact information, address, version date, and effective date.
+> This document is a draft privacy policy for the **EcoLove (愛環保)** app. Please have it reviewed by the responsible person or legal counsel before publication, and complete company details, contact information, address, version date, and effective date.
 
 Version date: 20 April 2026
 
 Effective date: 20 April 2026
 
-Welcome to **Lüyuanbao (綠緣寶)** (hereinafter “this App”, “we”, or “us”). We value your personal data and privacy and are committed to handling your personal data in accordance with the Personal Data (Privacy) Ordinance, Cap. 486 of the Laws of Hong Kong (“PDPO”) and other applicable laws.
+Welcome to **EcoLove (愛環保)** (hereinafter “this App”, “we”, or “us”). We value your personal data and privacy and are committed to handling your personal data in accordance with the Personal Data (Privacy) Ordinance, Cap. 486 of the Laws of Hong Kong (“PDPO”) and other applicable laws.
 
 This Privacy Policy explains:
 
@@ -31,7 +31,7 @@ If you have any questions about this Policy, please contact us as follows:
 
 This Policy applies to products and services we provide to you through:
 
-1. The Lüyuanbao (綠緣寶) mobile application  
+1. The EcoLove (愛環保) mobile application  
 2. Online features, customer support, and after-sales communications related to this App  
 3. Related electronic services we may launch in the course of our business  
 

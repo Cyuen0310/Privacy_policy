@@ -3,7 +3,7 @@ layout: default
 title: Privacy Policy
 ---
 
-# Privacy Policy — Lüyuanbao (綠緣寶)
+# Privacy Policy — EcoLove (愛環保)
 
 Choose a language:
 
