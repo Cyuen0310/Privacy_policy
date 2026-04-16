@@ -9,6 +9,7 @@
   {% endif %}
   <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
   <style>
+    /* One layout for EN / 简体 / 繁體 — keep spacing, nav, and column identical (no :lang() overrides). */
     :root {
       --text: #1a1a1a;
       --muted: #555;
