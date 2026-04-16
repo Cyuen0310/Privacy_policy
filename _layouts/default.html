@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{% if page.redirect_home or page.url contains 'PRIVACY_POLICY.zh-HK.html' %}zh-HK{% elsif page.url contains 'PRIVACY_POLICY.zh-CN.html' %}zh-CN{% elsif page.url contains 'PRIVACY_POLICY.en.html' %}en{% else %}en{% endif %}">
+<html lang="{% if page.redirect_home or page.url contains 'PRIVACY_POLICY.zh-HK.html' %}zh-HK{% elsif page.url contains 'PRIVACY_POLICY.zh-CN.html' %}zh-CN{% elsif page.url contains 'PRIVACY_POLICY.en.html' %}en{% else %}en{% endif %}" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +16,13 @@
       --accent: #1a1a1a;
     }
     * { box-sizing: border-box; }
-    html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+    /* Horizontal EN + 中文: force LTR so flex order & margins don’t flip on zh pages */
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      direction: ltr;
+      unicode-bidi: isolate;
+    }
     body {
       margin: 0;
       color: var(--text);
@@ -27,6 +33,7 @@
       font-size: 1rem;
     }
     .top {
+      direction: ltr;
       display: flex;
       flex-wrap: nowrap;
       justify-content: flex-end;
@@ -57,9 +64,11 @@
       font-size: 0.85rem;
     }
     main {
+      direction: ltr;
       max-width: min(100%, 68rem);
       margin: 0;
       padding: 1rem clamp(0.75rem, 2.5vw, 1.5rem) 2.5rem;
+      text-align: start;
     }
     .policy-content h1 {
       font-size: 1.5rem;
