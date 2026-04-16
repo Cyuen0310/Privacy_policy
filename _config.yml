@@ -1,7 +1,7 @@
 # GitHub Pages + Jekyll (https://pages.github.com/versions/)
 title: "Privacy Policy — EcoLove (愛環保)"
 description: "EcoLove (愛環保) app privacy policy (multi-language)"
-theme: jekyll-theme-cayman
+# Custom minimal layout in _layouts/default.html (no theme)
 # Project site URL (repo name must match your GitHub repo name exactly)
 baseurl: "/Privacy_policy"
 url: "https://cyuen0310.github.io"

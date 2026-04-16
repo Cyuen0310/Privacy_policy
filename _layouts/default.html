@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="{% if page.url contains 'zh-CN' %}zh-CN{% elsif page.url contains 'zh-HK' %}zh-HK{% else %}en{% endif %}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <style>
+    :root {
+      --text: #1a1a1a;
+      --muted: #555;
+      --border: #ccc;
+      --accent: #1a1a1a;
+    }
+    * { box-sizing: border-box; }
+    html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.65;
+      font-size: 1rem;
+    }
+    .top {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.85rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .top a {
+      color: var(--text);
+      text-decoration: none;
+      padding: 0.35rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+    .top a:hover {
+      background: #f2f2f2;
+    }
+    .top a[aria-current="page"] {
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+    .sep {
+      color: var(--muted);
+      user-select: none;
+      font-size: 0.85rem;
+    }
+    main {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 1.75rem 1.25rem 4rem;
+    }
+    .policy-content h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin: 0 0 1rem;
+    }
+    .policy-content h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 1.75rem 0 0.65rem;
+    }
+    .policy-content h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin: 1.35rem 0 0.5rem;
+    }
+    .policy-content p, .policy-content li {
+      margin: 0.65rem 0;
+    }
+    .policy-content ul, .policy-content ol {
+      margin: 0.65rem 0;
+      padding-left: 1.35rem;
+    }
+    .policy-content blockquote {
+      margin: 1rem 0;
+      padding: 0.5rem 0 0.5rem 1rem;
+      border-left: 3px solid var(--border);
+      color: var(--muted);
+    }
+    .policy-content hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+    .policy-content a {
+      color: var(--accent);
+    }
+    .policy-content strong {
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <header class="top" role="navigation" aria-label="Language">
+    <a
+      href="{{ site.baseurl }}/PRIVACY_POLICY.en.html"
+      {% if page.url contains 'PRIVACY_POLICY.en' %}aria-current="page"{% endif %}
+    >English</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <a
+      href="{{ site.baseurl }}/PRIVACY_POLICY.zh-CN.html"
+      {% if page.url contains 'PRIVACY_POLICY.zh-CN' %}aria-current="page"{% endif %}
+    >简体</a>
+    <span class="sep" aria-hidden="true">|</span>
+    <a
+      href="{{ site.baseurl }}/PRIVACY_POLICY.zh-HK.html"
+      {% if page.url contains 'PRIVACY_POLICY.zh-HK' %}aria-current="page"{% endif %}
+    >繁體</a>
+  </header>
+  <main class="policy-content">
+    {{ content }}
+  </main>
+</body>
+</html>
