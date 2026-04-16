@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="{% if page.url contains 'zh-CN' %}zh-CN{% elsif page.url contains 'zh-HK' %}zh-HK{% else %}en{% endif %}">
+<html lang="{% if page.redirect_home or page.url contains 'PRIVACY_POLICY.zh-HK.html' %}zh-HK{% elsif page.url contains 'PRIVACY_POLICY.zh-CN.html' %}zh-CN{% elsif page.url contains 'PRIVACY_POLICY.en.html' %}en{% else %}en{% endif %}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if page.redirect_home %}
+  <meta http-equiv="refresh" content="0; url={{ site.baseurl }}/PRIVACY_POLICY.zh-HK.html">
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/PRIVACY_POLICY.zh-HK.html">
+  {% endif %}
   <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
   <style>
     :root {
@@ -16,17 +20,21 @@
     body {
       margin: 0;
       color: var(--text);
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      /* Same stack for all languages so TC/EN/SC don’t switch metrics */
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+        "PingFang HK", "PingFang TC", "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif;
       line-height: 1.65;
       font-size: 1rem;
     }
     .top {
       display: flex;
+      flex-wrap: nowrap;
       justify-content: flex-end;
       align-items: center;
       gap: 0.35rem;
       padding: 0.75rem clamp(0.75rem, 2.5vw, 1.5rem);
       border-bottom: 1px solid var(--border);
+      white-space: nowrap;
     }
     .top a {
       color: var(--text);
@@ -99,17 +107,17 @@
   <header class="top" role="navigation" aria-label="Language">
     <a
       href="{{ site.baseurl }}/PRIVACY_POLICY.zh-HK.html"
-      {% if page.url contains 'PRIVACY_POLICY.zh-HK' %}aria-current="page"{% endif %}
+      {% if page.url contains 'PRIVACY_POLICY.zh-HK.html' %}aria-current="page"{% endif %}
     >繁體</a>
     <span class="sep" aria-hidden="true">|</span>
     <a
       href="{{ site.baseurl }}/PRIVACY_POLICY.zh-CN.html"
-      {% if page.url contains 'PRIVACY_POLICY.zh-CN' %}aria-current="page"{% endif %}
+      {% if page.url contains 'PRIVACY_POLICY.zh-CN.html' %}aria-current="page"{% endif %}
     >简体</a>
     <span class="sep" aria-hidden="true">|</span>
     <a
       href="{{ site.baseurl }}/PRIVACY_POLICY.en.html"
-      {% if page.url contains 'PRIVACY_POLICY.en' %}aria-current="page"{% endif %}
+      {% if page.url contains 'PRIVACY_POLICY.en.html' %}aria-current="page"{% endif %}
     >English</a>
   </header>
   <main class="policy-content">
